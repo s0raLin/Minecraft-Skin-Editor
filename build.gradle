@@ -1,0 +1,44 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.2.0'
+}
+
+group = 'cn.cangli'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation(libs.mockk)
+    implementation (libs.logback.classic)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.jsoup)
+    implementation(libs.kotlinx.html.jvm)
+    implementation(libs.kotlinx.datetime)
+    compileOnly (libs.lombok)
+
+    implementation group: 'com.google.guava', name: 'guava', version: '32.0.1-android'
+
+    implementation group: 'com.diogonunes', name: 'JCDP', version: '4.0.1'
+
+
+
+//    implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.5")
+    implementation(libs.kotlinx.cli)
+}
+
+test {
+    useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
+}
+
+test {
+
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
