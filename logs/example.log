@@ -1,4 +1,0 @@
-19:39:05 [main] ERROR Example - Something went wrong with divisor 0
-java.lang.ArithmeticException: / by zero
-19:39:11 [main] ERROR Example - Something went wrong with divisor 0
-java.lang.ArithmeticException: / by zero
