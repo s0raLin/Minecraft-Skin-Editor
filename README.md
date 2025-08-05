@@ -48,7 +48,7 @@ src/
    ./gradlew run
    ```
 
-3. 生成的图片将保存为 `test.png` 文件
+3. 生成的图片将保存为output目录下的 `test.png` 文件
 
 ## 代码说明
 
